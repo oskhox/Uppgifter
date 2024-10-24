@@ -34,6 +34,7 @@ public class PictureViewer extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    @Override
     public void actionPerformed(ActionEvent a) {
         if (swap == 0) {
             imageViewer.setIcon(new ImageIcon(imagePath2));
