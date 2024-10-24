@@ -13,7 +13,6 @@ public class PictureViewer extends JFrame implements ActionListener {
     JLabel imageViewer;
 
     public PictureViewer() {
-        setLayout(new FlowLayout());
         JButton changeImageButton = new JButton("Byt bild");
         imageViewer = new JLabel(new ImageIcon(imagePath1));
         imageViewer.setPreferredSize(new Dimension(800, 500));
@@ -22,11 +21,12 @@ public class PictureViewer extends JFrame implements ActionListener {
         panel.setBackground(Color.BLACK);
         panel.add(imageViewer);
         panel.add(changeImageButton);
-        add(panel); //lägger till panelen i JFrame utan this
 
         changeImageButton.addActionListener(this); //lägger till lyssnare till knappen
 
         //JFrame
+        add(panel); //lägger till panelen utan this
+        setLayout(new FlowLayout());
         setTitle("Bildvisare");
         pack(); //anpassar storleken efter komponenternas storlek
         setVisible(true);
