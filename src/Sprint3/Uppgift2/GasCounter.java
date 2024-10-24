@@ -84,7 +84,7 @@ public class GasCounter extends JFrame implements ActionListener {
         return totalLiterDouble / totalMil;
     }
 
-    //ActionListener
+    //ActionListener med scanners som parsas till doubles
     @Override
     public void actionPerformed(ActionEvent ae) {
         Scanner nowScan = new Scanner(field1.getText());
