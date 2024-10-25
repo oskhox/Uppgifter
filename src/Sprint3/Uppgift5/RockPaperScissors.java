@@ -104,11 +104,11 @@ public class RockPaperScissors extends JFrame implements ActionListener {
         } else if (choice1 == 1 && choice2 == 3 || choice1 == 3 && choice2 == 2 || choice1 == 2 && choice2 == 1) {
             messageNorth.setText("Du vann! Gör ett val.");
             userPoints++;
-            messageSouth.setText("Poäng användare-dator: " + userPoints + "-" + computerPoints);
+            messageSouth.setText("Poäng användare-dator: " + userPoints + " - " + computerPoints);
         } else {
             messageNorth.setText(("Du förlorade! Gör ett val."));
             computerPoints++;
-            messageSouth.setText("Poäng användare-dator: " + userPoints + "-" + computerPoints);
+            messageSouth.setText("Poäng användare-dator: " + userPoints + " - " + computerPoints);
         }
     }
 
