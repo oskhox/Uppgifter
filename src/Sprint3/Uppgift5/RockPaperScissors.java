@@ -35,15 +35,11 @@ public class RockPaperScissors extends JFrame implements ActionListener {
 
         //WEST
         westPanel.setLayout(new GridLayout(3, 1));
-        westPanel.add(rock1);
-        westPanel.add(scissors1);
-        westPanel.add(paper1);
+        westPanel.add(rock1); westPanel.add(scissors1); westPanel.add(paper1);
 
         //EAST
         eastPanel.setLayout(new GridLayout(3, 1));
-        eastPanel.add(rock2);
-        eastPanel.add(scissors2);
-        eastPanel.add(paper2);
+        eastPanel.add(rock2); eastPanel.add(scissors2); eastPanel.add(paper2);
 
         //JPanel setup
         add(jp);
