@@ -27,7 +27,7 @@ public class GasCounter extends JFrame implements ActionListener {
     public GasCounter() {
         //NORTH
         northPanel.setLayout(new FlowLayout());
-        northPanel.add(new JLabel("Fyll i en siffra och tryck sedan enter i respektive textruta.")); //kompakt
+        northPanel.add(new JLabel("Fyll i alla uppgifter och tryck sedan enter.")); //kompakt
 
         //WEST
         westPanel.setLayout(new GridLayout(3, 1));
