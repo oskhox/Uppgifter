@@ -18,6 +18,7 @@ public class printLocalNetwork {
         try {
             InetAddress myLocalHost = InetAddress.getLocalHost();
             System.out.println("-- Local IP and related information --");
+            System.out.println("All of LocalHost is: " + myLocalHost);
             System.out.println("LocalHost address is: " + myLocalHost.getHostAddress());
             System.out.println("LocalHost name is: " + myLocalHost.getHostName());
             System.out.println("Is LocalHost multicast?: " + myLocalHost.isMulticastAddress());
