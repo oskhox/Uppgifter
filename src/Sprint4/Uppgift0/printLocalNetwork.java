@@ -22,6 +22,7 @@ public class printLocalNetwork {
             System.out.println("LocalHost address is: " + myLocalHost.getHostAddress());
             System.out.println("LocalHost name is: " + myLocalHost.getHostName());
             System.out.println("Is LocalHost multicast?: " + myLocalHost.isMulticastAddress());
+
         } catch (UnknownHostException e) {
             System.out.println("There was an error printing the local ip.");
             e.printStackTrace();
