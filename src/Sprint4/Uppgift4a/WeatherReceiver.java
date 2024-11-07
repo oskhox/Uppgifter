@@ -10,7 +10,7 @@ public class WeatherReceiver {
         try {
             int toPort = 44446;
             DatagramSocket ds = new DatagramSocket(44446);
-            byte[] bytes = new byte[254];
+            byte[] bytes = new byte[256];
 
             //Receive all DatagramPackets and convert to String
             while (true) {
@@ -20,6 +20,7 @@ public class WeatherReceiver {
                 String s = new String(dgp.getData(), 0, dgp.getLength());
                 System.out.println(s);
 
+                //Ends the program on the user's request
                 if (s.equalsIgnoreCase("exit"))
                     System.exit(0);
             }
