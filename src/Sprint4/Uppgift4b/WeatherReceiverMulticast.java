@@ -3,9 +3,9 @@ package Sprint4.Uppgift4b;
 import java.io.IOException;
 import java.net.*;
 
-public class WeatherReceiver {
+public class WeatherReceiverMulticast {
 
-    WeatherReceiver() {
+    WeatherReceiverMulticast() {
         try {
             //Create socket, IP, group and network interface and then the receiver's socket joins the group
             int port = 44446;
@@ -35,6 +35,6 @@ public class WeatherReceiver {
     }
 
     public static void main(String[] args) {
-        WeatherReceiver wr = new WeatherReceiver();
+        WeatherReceiverMulticast wrm = new WeatherReceiverMulticast();
     }
 }

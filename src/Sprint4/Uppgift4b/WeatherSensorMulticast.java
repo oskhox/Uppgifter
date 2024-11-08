@@ -6,9 +6,9 @@ import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.util.Scanner;
 
-public class WeatherSensor {
+public class WeatherSensorMulticast {
 
-    WeatherSensor() {
+    WeatherSensorMulticast() {
         try {
             //Create IP, port, socket and logic
             InetAddress ip = InetAddress.getByName("234.234.234.234"); //Made up IP within allowed range
@@ -49,6 +49,6 @@ public class WeatherSensor {
     }
 
     public static void main(String[] args) {
-        WeatherSensor ws = new WeatherSensor();
+        WeatherSensorMulticast wsm = new WeatherSensorMulticast();
     }
 }
