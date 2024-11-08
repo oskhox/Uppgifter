@@ -10,14 +10,14 @@ public class WeatherSensorMulticast {
 
     WeatherSensorMulticast() {
         try {
-            //Create IP, port, socket and logic
+            //Create IP, port, socket and initial logic
             InetAddress ip = InetAddress.getByName("234.234.234.234"); //Made up IP within allowed range
             int toPort = 44446;
             MulticastSocket ms = new MulticastSocket();
             Scanner input = new Scanner(System.in);
             boolean keepAsking = true;
 
-            //User enters city and current temperature
+            //User enters city and current temperature as usual
             while (keepAsking) {
                 System.out.println("What city are you in?:");
                 String city = input.nextLine();
@@ -42,13 +42,13 @@ public class WeatherSensorMulticast {
             }
 
         } catch (IOException e) {
-            System.out.println("There was an error sending the quotes.");
+            System.out.println("There was an error sending the weather data.");
             e.printStackTrace();
         }
         System.exit(0);
     }
 
     public static void main(String[] args) {
-        WeatherSensorMulticast wsm = new WeatherSensorMulticast();
+        new WeatherSensorMulticast();
     }
 }

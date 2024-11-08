@@ -11,12 +11,12 @@ public class WeatherReceiverMulticast {
             int port = 44446;
             MulticastSocket ms = new MulticastSocket(port);
             byte[] bytes = new byte[256];
-            InetAddress ip = InetAddress.getByName("234.234.234.234"); //Made up IP within allowed range
+            InetAddress ip = InetAddress.getByName("234.234.234.234"); //The same made-up IP within allowed range
             InetSocketAddress group = new InetSocketAddress(ip, port); //Provided the group with IP and port number
             NetworkInterface netIf = NetworkInterface.getByName("en0"); //Provided the name of the local network interface
             ms.joinGroup(group, netIf);
 
-            //Receive all DatagramPackets and convert to String
+            //Receive all DatagramPackets and convert to String as usual
             while (true) {
                 DatagramPacket dgp = new DatagramPacket(bytes, bytes.length);
                 ms.receive(dgp);
@@ -29,12 +29,12 @@ public class WeatherReceiverMulticast {
                     System.exit(0);
             }
         } catch (IOException e) {
-            System.out.println("There was an error receiving the quotes.");
+            System.out.println("There was an error receiving the weather data.");
             e.printStackTrace();
         }
     }
 
     public static void main(String[] args) {
-        WeatherReceiverMulticast wrm = new WeatherReceiverMulticast();
+        new WeatherReceiverMulticast();
     }
 }

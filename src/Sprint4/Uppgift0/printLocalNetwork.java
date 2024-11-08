@@ -15,7 +15,7 @@ public class printLocalNetwork {
     public void printLocalIP() {
         //Prints my local IP etc
         try {
-            InetAddress myLocalHost = InetAddress.getLoopbackAddress(); //this one because of mac
+            InetAddress myLocalHost = InetAddress.getLoopbackAddress();//this one instead of getLocalHost() because of mac OS
             System.out.println("-- Local IP and related information --");
             System.out.println("All of LocalHost is: " + myLocalHost);
             System.out.println("LocalHost address is: " + myLocalHost.getHostAddress());
@@ -40,14 +40,13 @@ public class printLocalNetwork {
                 if (intface.isLoopback() || !intface.isUp())
                     continue;
 
-                //prints the interface
+                //prints the interface and ip
                 Enumeration<InetAddress> intAddresses = intface.getInetAddresses();
                 while (intAddresses.hasMoreElements()) {
                     InetAddress addr = intAddresses.nextElement();
                     String ip = addr.getHostAddress();
                     System.out.println("Interface display name and ip is: " + intface.getDisplayName() + " and " + ip);
                     System.out.println("Interface system name is: " + intface.getName());
-
                 }
             }
         } catch (SocketException e) {
