@@ -3,7 +3,6 @@ package Sprint4.Uppgift0;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.util.Enumeration;
 
 public class printLocalNetwork {
@@ -16,14 +15,14 @@ public class printLocalNetwork {
     public void printLocalIP() {
         //Prints my local IP etc
         try {
-            InetAddress myLocalHost = InetAddress.getLocalHost();
+            InetAddress myLocalHost = InetAddress.getLoopbackAddress(); //this one because of mac
             System.out.println("-- Local IP and related information --");
             System.out.println("All of LocalHost is: " + myLocalHost);
             System.out.println("LocalHost address is: " + myLocalHost.getHostAddress());
             System.out.println("LocalHost name is: " + myLocalHost.getHostName());
             System.out.println("Is LocalHost multicast?: " + myLocalHost.isMulticastAddress());
 
-        } catch (UnknownHostException e) {
+        } catch (Exception e) {
             System.out.println("There was an error printing the local ip.");
             e.printStackTrace();
         }
