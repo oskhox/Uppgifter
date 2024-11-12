@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+//Simple server that receives data from the client
 public class Server {
 
     public Server() {
-
         try (ServerSocket serverSocket = new ServerSocket(55556);
-             //Start the server socket and return a socket when the client has calls and a connection is established
+             //Start the serverSocket and return a socket when the client has called and a connection is first established
              Socket socket = serverSocket.accept();
              //Wrap the instream in a BufferedReader
              BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -23,7 +23,7 @@ public class Server {
             }
 
         } catch (IOException e) {
-            System.out.println("There was an error in the server reading the data.");
+            System.out.println("Server error reading the data.");
             e.printStackTrace();
         }
     }

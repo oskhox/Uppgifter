@@ -21,7 +21,7 @@ public class Client {
             }
 
         } catch (IOException | InterruptedException e) {
-            System.out.println("There was an error in the client sending the data.");
+            System.out.println("Client error while sending the data.");
             e.printStackTrace();
         }
     }
