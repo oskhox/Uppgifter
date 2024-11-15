@@ -4,7 +4,7 @@ import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-//This is a step-by-steg basic server-client implementation of serialization, otherwise identical to 'Uppgift6v2'
+//This is a step-by-steg basic TCP server-client implementation of serialization, otherwise identical to 'Uppgift6v2'
 
 public class Server {
 
