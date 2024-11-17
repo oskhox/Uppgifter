@@ -1,4 +1,4 @@
-package Sprint4.Other;
+package Sprint4.Additionals;
 
 import javax.swing.*;
 import java.awt.*;
